@@ -17,42 +17,47 @@
 
 </head>
 <body>
-  <h1>spli<br>tter</h1>
+  <h1>SPLI<br>TTER</h1>
   <main>
+    <section class="userInput">
+      <div class="bill" id="bill">
+        <p>Bill</p>
+        <input type="text" name="bill" placeholder="0">
+      </div>
 
-    <div class="bill" id="bill">
-      <p>Bill</p>
-      <input type="text" name="bill">
-    </div>
+      <div class="perc" id="perc">
+        <p>Select Tip %</p>
+        <button id="t5">5%</button>
+        <button id="t10">10%</button>
+        <button id="t15">15%</button>
+        <button id="t20">25%</button>
+        <button id="t50">50%</button>
+        <input type="text" name="custom" placeholder="Custom" id="custom">
+      </div>
 
-    <div class="perc" id="perc">
-      <p>Select Tip %</p>
-      <button id="t5">5%</button>
-      <button id="t10">10%</button>
-      <button id="t15">15%</button>
-      <button id="t20">25%</button>
-      <button id="t50">50%</button>
-      <button id="custom">Custom</button>
-    </div>
+      <div class="nop" id="nop">
+        <p>Number of People</p>
 
-    <div class="nop" id="nop">
-      <p>Number of People</p>
+        <input type="text" name="people" placeholder="0">
+      </div>
+    </section>
 
-      <input type="text" name="people">
-    </div>
+    <section class="result">
+      <div class="tip" id="tip">
+        <h2 id="tipPrice">$0.00</h2>
+        <p>Tip Amount</p>
+        <span>/ person</span>
+      </div>
 
-    <div class="tip" id="tip">
-      <p>Tip Amount
-      <span>/ person</span></p>
-      <p id="tipPrice">0.00$</p>
-    </div>
+      <div class="total" id="total">
+        <h2 id="totalPrice">$0.00</h2>
+        <p>Total</p>
+        <span>/ person</span>
+      </div>
 
-    <div class="total" id="total">
-      <p>Total
-      <span>/ person</span></p>
-      <p id="totalPrice">0.00$</p>
-    </div>
-    <button class="reset" id="reset">Reset</button>
+      <button class="reset" id="reset">Reset</button>
+
+    </section>
   </main>
 
 
