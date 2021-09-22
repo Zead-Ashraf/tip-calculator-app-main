@@ -89,6 +89,7 @@ main section.userInput .nop input {
   font-size: 24px;
   color: hsl(183, 100%, 15%);
   text-align: end;
+  cursor: pointer;
 }
 
 main section.userInput .bill input:-webkit-autofill,
@@ -167,7 +168,7 @@ main section.userInput .perc input#custom {
   background-color: hsl(189, 41%, 97%);
   color: hsl(183, 100%, 15%);
   border: none;
-  cursor: none;
+  cursor: pointer;
   text-align: center;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -216,6 +217,7 @@ main section.result div.total p {
   font-size: 16px;
   color: white;
   margin: 0;
+  display: inline;
 }
 
 main section.result div.tip span,
@@ -255,7 +257,7 @@ main section.result button {
 /* main section.result button:hover is above with {prc} buttons ...
 ...and the :active ,too; */
 
-/*********************************** Create My Own Response Page ***********************************/
+/**************************************************** Create My Own Response Page ****************************************************/
 
 @media (max-width: 767px) {
   html,
@@ -263,9 +265,9 @@ main section.result button {
     overflow: auto;
   }
   main {
-    width: 80%;
+    width: 100%;
     height: auto;
-    left: 10%;
+    left: 0;
     top: 75%;
     flex-direction: column;
     transform: translate(0, -30%);
@@ -273,6 +275,13 @@ main section.result button {
     -moz-transform: translate(0, -30%);
     -ms-transform: translate(0, -30%);
     -o-transform: translate(0, -30%);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
   main section.userInput {
     width: 100%;
@@ -283,6 +292,8 @@ main section.result button {
     width: 100%;
     height: auto;
     padding: 70px 25px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
   main section.result div.tip h2,
   main section.result div.total h2 {
@@ -294,6 +305,46 @@ main section.result button {
     margin: 10px 10px 2px;
     text-align: center;
   }
+  main section.userInput .perc button {
+    width: calc(100% / 2 - 35px);
+  }
+  main section.userInput .perc input#custom {
+    width: calc(100% / 2 - 35px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  html,
+  body {
+    overflow-y: auto;
+  }
+  main {
+    margin-top: 150px;
+    height: auto;
+    padding: 20px 0;
+  }
+  main section.result {
+    height: auto;
+  }
+  main section.result div.tip h2,
+  main section.result div.total h2 {
+    display: block;
+    margin: 10px;
+    text-align: center;
+    float: none;
+  }
+  main section.result div.tip p,
+  main section.result div.total p {
+    margin: 0;
+    text-align: center;
+  }
+  main section.result div.tip span,
+  main section.result div.total span {
+    margin: 10px;
+    text-align: center;
+    display: block;
+  }
+
   main section.userInput .perc button {
     width: calc(100% / 2 - 35px);
   }
