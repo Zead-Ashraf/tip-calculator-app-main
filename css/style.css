@@ -67,6 +67,11 @@ main section.userInput {
 	flex-direction: column;
 }
 
+main section.userInput .bill,
+main section.userInput .nop
+{
+	position: relative;
+}
 
 main section.userInput .bill p, 
 main section.userInput .perc p,
@@ -106,6 +111,14 @@ main section.userInput .nop input::placeholder {
 main section.userInput .bill input:focus-visible,
 main section.userInput .nop input:focus-visible {
 	outline-color: hsl(172, 67%, 45%);
+}
+
+main section.userInput .bill i,
+main section.userInput .nop i
+{
+	position: absolute;
+	top: 71px;
+	left: 5px;
 }
 
 /******************************************************************************/
