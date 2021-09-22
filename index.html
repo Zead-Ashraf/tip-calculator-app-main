@@ -2,43 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href= "css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <h1>spli<br>tter</h1>
+  <main>
 
-  Bill
+    <div class="bill" id="bill">
+      <p>Bill</p>
+      <input type="text" name="bill">
+    </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+    <div class="perc" id="perc">
+      <p>Select Tip %</p>
+      <button id="t5">5%</button>
+      <button id="t10">10%</button>
+      <button id="t15">15%</button>
+      <button id="t20">25%</button>
+      <button id="t50">50%</button>
+      <button id="custom">Custom</button>
+    </div>
 
-  Number of People
+    <div class="nop" id="nop">
+      <p>Number of People</p>
 
-  Tip Amount
-  / person
+      <input type="text" name="people">
+    </div>
 
-  Total
-  / person
+    <div class="tip" id="tip">
+      <p>Tip Amount
+      <span>/ person</span></p>
+      <p id="tipPrice">0.00$</p>
+    </div>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <div class="total" id="total">
+      <p>Total
+      <span>/ person</span></p>
+      <p id="totalPrice">0.00$</p>
+    </div>
+    <button class="reset" id="reset">Reset</button>
+  </main>
+
+
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

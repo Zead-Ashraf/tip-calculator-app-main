@@ -1,0 +1,13 @@
+html, body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-family: 'Space Mono', monospace;
+	font-size: 24px;
+	overflow: hidden;
+}
+
+#t5 {
+	color: green;
+}
