@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 html, body {
 	width: 100vw;
 	height: 100vh;
@@ -29,9 +33,18 @@ main {
 	display: flex;
 	justify-content: space-between;
 	background-color: white;
-	width: 60vw;
-	height: 52vh;
+	width: 65vw;
+	height: 65vh;
 	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	margin-top: 30px;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
 }
 
 /******************************************************************************/
@@ -47,29 +60,26 @@ main section.userInput {
 
 main section.userInput .bill p, 
 main section.userInput .perc p,
-main section.userInput .nop p 
-{
+main section.userInput .nop p {
 	color: hsl(186, 14%, 43%);
 }
 
 
 main section.userInput .bill input,
-main section.userInput .nop input
-{
+main section.userInput .nop input {
 	border: none;
 	height: 38px;
-    width: 92%;
-    background-color: hsl(189, 41%, 97%);
-    font-family: 'Space Mono', monospace;
+  width: 92%;
+  background-color: hsl(189, 41%, 97%);
+  font-family: 'Space Mono', monospace;
 	font-size: 24px;
 	color: hsl(183, 100%, 15%);
-    text-align: end;
+  text-align: end;
 }
 
 
 main section.userInput .bill input::placeholder,
-main section.userInput .nop input::placeholder
-{
+main section.userInput .nop input::placeholder {
 	float: right;
 	font-family: 'Space Mono', monospace;
 	font-size: 24px;
@@ -77,8 +87,7 @@ main section.userInput .nop input::placeholder
 
 
 main section.userInput .bill input:focus-visible,
-main section.userInput .nop input:focus-visible
-{
+main section.userInput .nop input:focus-visible {
 	outline-color: hsl(172, 67%, 45%);
 }
 
@@ -96,18 +105,24 @@ main section.userInput .perc button {
 	font-size: 24px;
 	color: white;
 	transition: background-color .5s ease-in-out;
+	-webkit-transition: background-color .5s ease-in-out;
+	-moz-transition: background-color .5s ease-in-out;
+	-ms-transition: background-color .5s ease-in-out;
+	-o-transition: background-color .5s ease-in-out;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
 }
 
 main section.userInput .perc button:hover, 
-main section.result button:hover
-{
+main section.result button:hover {
 	background-color: hsl(173deg 61% 77%);
 	color: hsl(183, 100%, 15%);
 }
 
 main section.userInput .perc button:active, 
-main section.result button:active
-{
+main section.result button:active {
 	background-color: rgb(38, 194, 173);
 	color: hsl(183, 100%, 15%);
 }
@@ -127,6 +142,10 @@ main section.userInput .perc input#custom {
 	border: none;
 	cursor: none;
 	text-align: end;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
 }
 
 main section.userInput .perc input#custom::placeholder {
@@ -153,32 +172,33 @@ main section.result {
 	padding-right: 30px;
 	background-color: hsl(183, 100%, 15%);
 	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
 }
 
 main section.result div.tip p,
-main section.result div.total p
-{
+main section.result div.total p {
 	font-size: 16px;
 	color: white;
 	margin: 0;
 }
 
 main section.result div.tip span,
-main section.result div.total span 
-{
+main section.result div.total span {
 	font-size: 14px;
 	color: hsl(186, 14%, 43%);
 	margin: 0;
 }
 
 main section.result div.tip h2,
-main section.result div.total h2
-{
+main section.result div.total h2 {
 	display: inline;
 	float: right;
-    margin: 0;
-    font-size: 40px;
-    color: hsl(172, 67%, 45%);
+  margin: 0;
+  font-size: 40px;
+  color: hsl(172, 67%, 45%);
 }
 
 
@@ -194,8 +214,22 @@ main section.result button {
 	color: rgb(5, 93, 97);
 	font-weight: 700;
 	transition: background-color .5s ease-in-out;
+	-webkit-transition: background-color .5s ease-in-out;
+	-moz-transition: background-color .5s ease-in-out;
+	-ms-transition: background-color .5s ease-in-out;
+	-o-transition: background-color .5s ease-in-out;
 }
 
 /* main section.result button:hover is above with {prc} buttons ...
 ...and the :active ,too; */
 
+/*********************************** Create My Own Response Page ***********************************/
+
+@media (max-width: 767px) {
+	main section.userInput {
+		width: 100%;
+	}
+	main section.result {
+		width: 100%;
+	}
+}
