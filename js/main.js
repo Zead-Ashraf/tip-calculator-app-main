@@ -4,3 +4,7 @@ let amount = document.getElementById("amount"),
     tip = document.getElementById("tipPrice"),
     total = document.getElementById("totalPrice"),
     DeleteItems = document.getElementById("reset");
+
+// total.innerHTML = `$${amount.innerHTML}`
+
+console.log(amount.value)

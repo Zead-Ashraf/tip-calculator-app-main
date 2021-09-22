@@ -21,9 +21,19 @@ h1 {
 	top: 0;
 	transform: translate(-50%);
 	color: rgb(70, 105, 107);
+	-webkit-transform: translate(-50%);
+	-moz-transform: translate(-50%);
+	-ms-transform: translate(-50%);
+	-o-transform: translate(-50%);
 }
 
 /******************************************************************************/
+
+button {
+  cursor: pointer;
+}
+
+/*****************************************************************************/
 
 main {
 	position: absolute;
@@ -77,6 +87,13 @@ main section.userInput .nop input {
   text-align: end;
 }
 
+main section.userInput .bill input:-webkit-autofill,
+main section.userInput .bill input:-webkit-autofill:focus,
+main section.userInput .nop input:-webkit-autofill,
+main section.userInput .nop input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 50px hsl(189, 41%, 97%) inset;
+  -webkit-text-fill-color: hsl(183, 100%, 15%);
+}
 
 main section.userInput .bill input::placeholder,
 main section.userInput .nop input::placeholder {
@@ -146,6 +163,12 @@ main section.userInput .perc input#custom {
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
+}
+
+main section.userInput .perc input#custom input:-webkit-autofill,
+main section.userInput .perc input#custom input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 50px hsl(189, 41%, 97%) inset;
+  -webkit-text-fill-color: hsl(183, 100%, 15%);
 }
 
 main section.userInput .perc input#custom::placeholder {
