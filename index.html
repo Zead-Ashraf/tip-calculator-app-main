@@ -1,79 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <link 
-    rel="icon" 
-    type="image/png" 
-    sizes="32x32" 
-    href="./images/favicon-32x32.png" 
-  />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="stylesheet" href= "css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" 
-    rel="stylesheet" 
-  />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link href="fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet" /> 
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link href="fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet" />
 
-</head>
-<body>
-  <h1>SPLI<br>TTER</h1>
-  <main>
-    <section class="userInput">
-      <div class="bill" id="bill">
-        <p>Bill</p>
-        <input id="amount" type="text" name="bill" placeholder="0">
-        <i class="fas fa-dollar-sign"></i>
-      </div>
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <h1>SPLI<br />TTER</h1>
+    <main>
+      <section class="userInput">
+        <div class="bill" id="bill">
+          <p>Bill</p>
+          <input id="amount" type="text" name="bill" placeholder="0" />
+          <i class="fas fa-dollar-sign"></i>
+        </div>
 
-      <div class="perc" id="perc">
-        <p>Select Tip %</p>
-        <button id="t5">5%</button>
-        <button id="t10">10%</button>
-        <button id="t15">15%</button>
-        <button id="t20">25%</button>
-        <button id="t50">50%</button>
-        <input id="custom" type="text" name="custom" placeholder="Custom" id="custom">
-      </div>
+        <div class="perc" id="perc">
+          <p>Select Tip %</p>
+          <button id="t5">5%</button>
+          <button id="t10">10%</button>
+          <button id="t15">15%</button>
+          <button id="t20">25%</button>
+          <button id="t50">50%</button>
+          <input
+            id="custom"
+            type="text"
+            name="custom"
+            placeholder="Custom"
+            id="custom"
+          />
+        </div>
 
-      <div class="nop" id="nop">
-        <p>Number of People</p>
-        <input id="people" type="text" name="people" placeholder="0">
-        <i class="fas fa-user"></i>
-      </div>
-    </section>
+        <div class="nop" id="nop">
+          <p>Number of People</p>
+          <input id="people" type="text" name="people" placeholder="0" />
+          <i class="fas fa-user"></i>
+        </div>
+      </section>
 
-    <section class="result">
-      <div class="tip" id="tip">
-        <h2 id="tipPrice">$0.00</h2>
-        <p>Tip Amount</p>
-        <span>/ person</span>
-      </div>
+      <section class="result">
+        <div class="tip" id="tip">
+          <h2 id="tipPrice">$0.00</h2>
+          <p>Tip Amount</p>
+          <span>/ person</span>
+        </div>
 
-      <div class="total" id="total">
-        <h2 id="totalPrice">$0.00</h2>
-        <p>Total</p>
-        <span>/ person</span>
-      </div>
+        <div class="total" id="total">
+          <h2 id="totalPrice">$0.00</h2>
+          <p>Total</p>
+          <span>/ person</span>
+        </div>
 
-      <button class="reset" id="reset">Reset</button>
+        <button class="reset" id="reset">Reset</button>
+      </section>
+    </main>
 
-    </section>
-  </main>
-
-
-  <script type="text/javascript" src="js/main.js"></script>
-</body>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
 </html>
