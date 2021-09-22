@@ -168,7 +168,7 @@ main section.userInput .perc input#custom {
   color: hsl(183, 100%, 15%);
   border: none;
   cursor: none;
-  text-align: end;
+  text-align: center;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -258,10 +258,46 @@ main section.result button {
 /*********************************** Create My Own Response Page ***********************************/
 
 @media (max-width: 767px) {
+  html,
+  body {
+    overflow: auto;
+  }
+  main {
+    width: 80%;
+    height: auto;
+    left: 10%;
+    top: 75%;
+    flex-direction: column;
+    transform: translate(0, -30%);
+    -webkit-transform: translate(0, -30%);
+    -moz-transform: translate(0, -30%);
+    -ms-transform: translate(0, -30%);
+    -o-transform: translate(0, -30%);
+  }
   main section.userInput {
     width: 100%;
+    padding: 10px 10px;
+    margin: 20px;
   }
   main section.result {
     width: 100%;
+    height: auto;
+    padding: 70px 25px;
+  }
+  main section.result div.tip h2,
+  main section.result div.total h2 {
+    display: block;
+    margin: 10px;
+  }
+  main section.result div.tip p,
+  main section.result div.total p {
+    margin: 10px 10px 2px;
+    text-align: center;
+  }
+  main section.userInput .perc button {
+    width: calc(100% / 2 - 35px);
+  }
+  main section.userInput .perc input#custom {
+    width: calc(100% / 2 - 35px);
   }
 }

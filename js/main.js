@@ -3,8 +3,4 @@ let amount = document.getElementById("amount"),
   numberPeople = document.getElementById("people"),
   tip = document.getElementById("tipPrice"),
   total = document.getElementById("totalPrice"),
-  DeleteItems = document.getElementById("reset");
-
-// total.innerHTML = `$${amount.innerHTML}`
-
-console.log(amount.value);
+  deleteItems = document.getElementById("reset");
