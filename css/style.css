@@ -1,201 +1,373 @@
-html, body {
-	width: 100vw;
-	height: 100vh;
-	margin: 0;
-	padding: 0;
-	background-color: hsl(185, 41%, 84%);
-	font-family: 'Space Mono', monospace;
-	font-size: 18px;
-	overflow: hidden;
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+  font-size: 18px;
+  overflow: hidden;
 }
 
 /******************************************************************************/
 
 h1 {
-	position: absolute;
-	left: 50%;
-	top: 0;
-	transform: translate(-50%);
-	color: rgb(70, 105, 107);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  color: rgb(70, 105, 107);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
 }
 
 /******************************************************************************/
 
+button {
+  cursor: pointer;
+}
+
+/*****************************************************************************/
+
 main {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	display: flex;
-	justify-content: space-between;
-	background-color: white;
-	width: 60vw;
-	height: 52vh;
-	border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 65vw;
+  height: 65vh;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  margin-top: 30px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 
 /******************************************************************************/
 
 main section.userInput {
-	width: 50%;
-	margin: 40px;
-	margin-top: 30px;
-	display: flex;
-	flex-direction: column;
+  width: 50%;
+  margin: 40px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
+main section.userInput .bill,
+main section.userInput .nop {
+  position: relative;
+}
 
-main section.userInput .bill p, 
+main section.userInput .bill p,
 main section.userInput .perc p,
-main section.userInput .nop p 
-{
-	color: hsl(186, 14%, 43%);
+main section.userInput .nop p {
+  color: hsl(186, 14%, 43%);
 }
 
+main section.userInput .bill .input-box,
+main section.userInput .nop .input-box
+ {
+  position: relative;
+  height: 38px;
+  width: 92%;
+}
 
 main section.userInput .bill input,
-main section.userInput .nop input
-{
-	border: none;
-	height: 38px;
-    width: 92%;
-    background-color: hsl(189, 41%, 97%);
-    font-family: 'Space Mono', monospace;
-	font-size: 24px;
-	color: hsl(183, 100%, 15%);
-    text-align: end;
+main section.userInput .nop input {
+  border: none;
+  height: 38px;
+  width: 92%;
+  background-color: hsl(189, 41%, 97%);
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  color: hsl(183, 100%, 15%);
+  text-align: end;
+  cursor: pointer;
 }
 
+main section.userInput .bill input:-webkit-autofill,
+main section.userInput .bill input:-webkit-autofill:focus,
+main section.userInput .nop input:-webkit-autofill,
+main section.userInput .nop input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 50px hsl(189, 41%, 97%) inset;
+  -webkit-text-fill-color: hsl(183, 100%, 15%);
+}
 
 main section.userInput .bill input::placeholder,
-main section.userInput .nop input::placeholder
-{
-	float: right;
-	font-family: 'Space Mono', monospace;
-	font-size: 24px;
+main section.userInput .nop input::placeholder {
+  float: right;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
 }
 
-
 main section.userInput .bill input:focus-visible,
-main section.userInput .nop input:focus-visible
-{
-	outline-color: hsl(172, 67%, 45%);
+main section.userInput .nop input:focus-visible {
+  outline-color: hsl(172, 67%, 45%);
+}
+
+main section.userInput .bill i,
+main section.userInput .nop i {
+  position: absolute;
+  top: 9px;
+  left: 5px;
 }
 
 /******************************************************************************/
 
 main section.userInput .perc button {
-	width: calc(100% / 4);
-	height: 35px;
-	margin-bottom: 15px;
-	margin-right: 5px;
-	border-radius: 3px;
-	background-color: hsl(183, 100%, 15%);
-	border: none;
-	font-family: 'Space Mono', monospace;
-	font-size: 24px;
-	color: white;
-	transition: background-color .5s ease-in-out;
+  width: calc(100% / 4);
+  height: 35px;
+  margin-bottom: 15px;
+  margin-right: 5px;
+  border-radius: 3px;
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  color: white;
+  transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -ms-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 
-main section.userInput .perc button:hover, 
-main section.result button:hover
-{
-	background-color: hsl(173deg 61% 77%);
-	color: hsl(183, 100%, 15%);
+main section.userInput .perc button:hover,
+main section.result button:hover {
+  background-color: hsl(173deg 61% 77%);
+  color: hsl(183, 100%, 15%);
 }
 
-main section.userInput .perc button:active, 
-main section.result button:active
-{
-	background-color: rgb(38, 194, 173);
-	color: hsl(183, 100%, 15%);
+main section.userInput .perc button:active,
+main section.result button:active {
+  background-color: rgb(38, 194, 173);
+  color: hsl(183, 100%, 15%);
 }
 
 /******************************************************************************/
 
 main section.userInput .perc input#custom {
-	width: calc(100% / 4);
-	height: 35px;
-	margin-bottom: 15px;
-	margin-right: 5px;
-	border-radius: 3px;
-	font-family: 'Space Mono', monospace;
-	font-size: 24px;
-	background-color: hsl(189, 41%, 97%);
-	color: hsl(183, 100%, 15%);
-	border: none;
-	cursor: none;
-	text-align: end;
+  width: calc(100% / 4);
+  height: 35px;
+  margin-bottom: 15px;
+  margin-right: 5px;
+  border-radius: 3px;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+main section.userInput .perc input#custom input:-webkit-autofill,
+main section.userInput .perc input#custom input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 50px hsl(189, 41%, 97%) inset;
+  -webkit-text-fill-color: hsl(183, 100%, 15%);
 }
 
 main section.userInput .perc input#custom::placeholder {
-	font-family: 'Space Mono', monospace;
-	font-size: 20px;
-	color: gray;
+  font-family: "Space Mono", monospace;
+  font-size: 20px;
+  color: gray;
 }
 
 main section.userInput .perc input#custom:focus-visible {
-	outline-color: hsl(172, 67%, 45%);
+  outline-color: hsl(172, 67%, 45%);
 }
 
 /******************************************************************************/
 
 main section.result {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	width: 50%;
-	height: 80%;
-	margin-top: 5%;
-	margin-right: 2.5%;
-	padding-left: 40px;
-	padding-right: 30px;
-	background-color: hsl(183, 100%, 15%);
-	border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  height: 80%;
+  margin-top: 5%;
+  margin-right: 2.5%;
+  padding-left: 40px;
+  padding-right: 30px;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 main section.result div.tip p,
-main section.result div.total p
-{
-	font-size: 16px;
-	color: white;
-	margin: 0;
+main section.result div.total p {
+  font-size: 16px;
+  color: white;
+  margin: 0;
+  display: inline;
 }
 
 main section.result div.tip span,
-main section.result div.total span 
-{
-	font-size: 14px;
-	color: hsl(186, 14%, 43%);
-	margin: 0;
+main section.result div.total span {
+  font-size: 14px;
+  color: hsl(186, 14%, 43%);
+  margin: 0;
 }
 
 main section.result div.tip h2,
-main section.result div.total h2
-{
-	display: inline;
-	float: right;
-    margin: 0;
-    font-size: 40px;
-    color: hsl(172, 67%, 45%);
+main section.result div.total h2 {
+  display: inline;
+  float: right;
+  margin: 0;
+  font-size: 40px;
+  color: hsl(172, 67%, 45%);
 }
-
 
 /******************************************************************************/
 
 main section.result button {
-	width: 100%;
-	height: 40px;
-	border: none;
-	font-family: 'Space Mono', monospace;
-	font-size: 18px;
-	background-color: rgb(13, 104, 109);
-	color: rgb(5, 93, 97);
-	font-weight: 700;
-	transition: background-color .5s ease-in-out;
+  width: 100%;
+  height: 40px;
+  border: none;
+  font-family: "Space Mono", monospace;
+  font-size: 18px;
+  background-color: rgb(13, 104, 109);
+  color: rgb(5, 93, 97);
+  font-weight: 700;
+  transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -ms-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
 }
 
 /* main section.result button:hover is above with {prc} buttons ...
 ...and the :active ,too; */
 
+/**************************************************** Create My Own Response Page ****************************************************/
+
+@media (max-width: 767px) {
+  html,
+  body {
+    overflow: auto;
+  }
+  main {
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 75%;
+    flex-direction: column;
+    transform: translate(0, -30%);
+    -webkit-transform: translate(0, -30%);
+    -moz-transform: translate(0, -30%);
+    -ms-transform: translate(0, -30%);
+    -o-transform: translate(0, -30%);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  main section.userInput {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 20px;
+  }
+  main section.result {
+    width: 100%;
+    height: auto;
+    padding: 70px 25px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  main section.result div.tip h2,
+  main section.result div.total h2 {
+    display: block;
+    margin: 10px;
+  }
+  main section.result div.tip p,
+  main section.result div.total p {
+    margin: 10px 10px 2px;
+    text-align: center;
+  }
+  main section.userInput .perc button {
+    width: calc(100% / 2 - 35px);
+  }
+  main section.userInput .perc input#custom {
+    width: calc(100% / 2 - 35px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  html,
+  body {
+    overflow-y: auto;
+  }
+  main {
+    margin-top: 150px;
+    height: auto;
+    padding: 20px 0;
+  }
+  main section.result {
+    height: auto;
+  }
+  main section.result div.tip h2,
+  main section.result div.total h2 {
+    display: block;
+    margin: 10px;
+    text-align: center;
+    float: none;
+  }
+  main section.result div.tip p,
+  main section.result div.total p {
+    margin: 0;
+    text-align: center;
+  }
+  main section.result div.tip span,
+  main section.result div.total span {
+    margin: 10px;
+    text-align: center;
+    display: block;
+  }
+
+  main section.userInput .perc button {
+    width: calc(100% / 2 - 35px);
+  }
+  main section.userInput .perc input#custom {
+    width: calc(100% / 2 - 35px);
+  }
+}
+
+/******************************************* needed classes *******************************/
+
+.BillP {
+  margin: 7px;
+}
+
+.warnning {
+  display: inline;
+  color: red !important;
+}
