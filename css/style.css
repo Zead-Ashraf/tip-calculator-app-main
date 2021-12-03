@@ -79,6 +79,14 @@ main section.userInput .nop p {
   color: hsl(186, 14%, 43%);
 }
 
+main section.userInput .bill .input-box,
+main section.userInput .nop .input-box
+ {
+  position: relative;
+  height: 38px;
+  width: 92%;
+}
+
 main section.userInput .bill input,
 main section.userInput .nop input {
   border: none;
@@ -115,7 +123,7 @@ main section.userInput .nop input:focus-visible {
 main section.userInput .bill i,
 main section.userInput .nop i {
   position: absolute;
-  top: 71px;
+  top: 9px;
   left: 5px;
 }
 
@@ -351,4 +359,15 @@ main section.result button {
   main section.userInput .perc input#custom {
     width: calc(100% / 2 - 35px);
   }
+}
+
+/******************************************* needed classes *******************************/
+
+.BillP {
+  margin: 7px;
+}
+
+.warnning {
+  display: inline;
+  color: red !important;
 }
